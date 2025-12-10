@@ -1,0 +1,26 @@
+{
+    "name": "stork-oracle-quiz",
+    "version": "1.0.0",
+    "description": "Multiplayer quiz game about Stork Oracle with real-time features",
+    "scripts": {
+        "dev": "node server.js",
+        "start": "node server.js",
+        "serve": "npx http-server"
+    },
+    "keywords": [
+        "quiz",
+        "multiplayer",
+        "stork",
+        "oracle",
+        "supabase",
+        "realtime"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.13.2",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.3",
+        "express": "^5.2.1"
+    }
+}

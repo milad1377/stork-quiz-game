@@ -1,0 +1,17 @@
+{
+    "buildCommand": null,
+    "devCommand": null,
+    "installCommand": null,
+    "framework": null,
+    "outputDirectory": null,
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "/api/$1"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}

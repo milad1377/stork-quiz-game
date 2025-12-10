@@ -1,0 +1,875 @@
+[
+    {
+        "question_text": "What is Stork Oracle?",
+        "option_a": "A decentralized price oracle",
+        "option_b": "A centralized exchange",
+        "option_c": "A blockchain network",
+        "option_d": "A wallet provider",
+        "correct_answer": "a",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What blockchain does Stork primarily support?",
+        "option_a": "Ethereum only",
+        "option_b": "Multiple EVM and non-EVM chains",
+        "option_c": "Bitcoin only",
+        "option_d": "Solana only",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is the main advantage of Stork Oracle?",
+        "option_a": "High gas fees",
+        "option_b": "Low latency price feeds",
+        "option_c": "Centralized control",
+        "option_d": "Limited asset coverage",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "How does Stork ensure data accuracy?",
+        "option_a": "Single source verification",
+        "option_b": "Manual updates",
+        "option_c": "Multiple data sources and cryptographic signatures",
+        "option_d": "Random selection",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What type of data does Stork Oracle provide?",
+        "option_a": "Only cryptocurrency prices",
+        "option_b": "Weather data",
+        "option_c": "Real-time price feeds for various assets",
+        "option_d": "Social media metrics",
+        "correct_answer": "c",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "Is Stork Oracle permissionless?",
+        "option_a": "Yes, anyone can use it",
+        "option_b": "No, requires KYC",
+        "option_c": "Only for institutions",
+        "option_d": "Requires government approval",
+        "correct_answer": "a",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is the update frequency of Stork price feeds?",
+        "option_a": "Once per day",
+        "option_b": "Once per hour",
+        "option_c": "Sub-second latency",
+        "option_d": "Once per week",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support cross-chain operations?",
+        "option_a": "No, single chain only",
+        "option_b": "Yes, multi-chain support",
+        "option_c": "Only Ethereum and BSC",
+        "option_d": "Only layer 2 solutions",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What makes Stork different from traditional oracles?",
+        "option_a": "Higher costs",
+        "option_b": "Slower updates",
+        "option_c": "Pull-based architecture with low latency",
+        "option_d": "Centralized servers",
+        "correct_answer": "c",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Can developers integrate Stork into their DeFi protocols?",
+        "option_a": "No, closed system",
+        "option_b": "Yes, with easy integration",
+        "option_c": "Only with special permission",
+        "option_d": "Only for specific protocols",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is the primary use case for Stork Oracle?",
+        "option_a": "Gaming",
+        "option_b": "DeFi price feeds",
+        "option_c": "NFT minting",
+        "option_d": "Social networking",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "Does Stork provide historical price data?",
+        "option_a": "No, only real-time",
+        "option_b": "Yes, comprehensive historical data",
+        "option_c": "Only for premium users",
+        "option_d": "Only last 24 hours",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What security measures does Stork implement?",
+        "option_a": "No security",
+        "option_b": "Password protection only",
+        "option_c": "Cryptographic signatures and decentralization",
+        "option_d": "Manual verification",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Is Stork Oracle open source?",
+        "option_a": "Fully closed source",
+        "option_b": "Partially open source",
+        "option_c": "Fully open source",
+        "option_d": "Open source for premium users only",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What assets can Stork Oracle track?",
+        "option_a": "Only Bitcoin",
+        "option_b": "Crypto, stocks, commodities, and more",
+        "option_c": "Only altcoins",
+        "option_d": "Only stablecoins",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "How does Stork handle price manipulation?",
+        "option_a": "Ignores it",
+        "option_b": "Multiple source aggregation and outlier detection",
+        "option_c": "Manual review",
+        "option_d": "Single source trust",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Can Stork be used for derivatives trading?",
+        "option_a": "No",
+        "option_b": "Yes, ideal for derivatives",
+        "option_c": "Only for spot trading",
+        "option_d": "Only for futures",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to decentralization?",
+        "option_a": "Fully centralized",
+        "option_b": "Hybrid decentralized model",
+        "option_c": "No decentralization",
+        "option_d": "Only governance is decentralized",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support custom data feeds?",
+        "option_a": "No customization",
+        "option_b": "Yes, customizable feeds",
+        "option_c": "Only preset feeds",
+        "option_d": "Custom feeds cost extra",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is the latency of Stork price updates?",
+        "option_a": "Minutes",
+        "option_b": "Hours",
+        "option_c": "Milliseconds to sub-second",
+        "option_d": "Days",
+        "correct_answer": "c",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "Can Stork Oracle be used for lending protocols?",
+        "option_a": "No",
+        "option_b": "Yes, perfect for lending",
+        "option_c": "Only for borrowing",
+        "option_d": "Only for collateral",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What consensus mechanism does Stork use?",
+        "option_a": "Proof of Work",
+        "option_b": "Proof of Stake",
+        "option_c": "Publisher consensus with cryptographic proofs",
+        "option_d": "Delegated Proof of Stake",
+        "correct_answer": "c",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Is Stork suitable for high-frequency trading?",
+        "option_a": "No, too slow",
+        "option_b": "Yes, low latency design",
+        "option_c": "Only for slow trading",
+        "option_d": "Not designed for trading",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork have a native token?",
+        "option_a": "Yes, STORK token",
+        "option_b": "No native token",
+        "option_c": "Uses ETH only",
+        "option_d": "Uses BTC only",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's data verification method?",
+        "option_a": "No verification",
+        "option_b": "Manual checks",
+        "option_c": "Cryptographic signatures from publishers",
+        "option_d": "Community voting",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork integrate with smart contracts?",
+        "option_a": "No integration",
+        "option_b": "Yes, seamless integration",
+        "option_c": "Only with specific contracts",
+        "option_d": "Requires middleware",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is the cost model for using Stork?",
+        "option_a": "Free for all",
+        "option_b": "Pay per query",
+        "option_c": "Subscription based",
+        "option_d": "Varies by use case",
+        "correct_answer": "d",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support NFT price feeds?",
+        "option_a": "No NFT support",
+        "option_b": "Yes, NFT floor prices",
+        "option_c": "Only for specific collections",
+        "option_d": "Coming soon",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's uptime guarantee?",
+        "option_a": "50%",
+        "option_b": "75%",
+        "option_c": "99%+",
+        "option_d": "No guarantee",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork be used for prediction markets?",
+        "option_a": "No",
+        "option_b": "Yes, ideal for prediction markets",
+        "option_c": "Only for betting",
+        "option_d": "Only for sports",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What programming languages support Stork integration?",
+        "option_a": "Only Solidity",
+        "option_b": "Multiple languages including Solidity, Rust, and more",
+        "option_c": "Only JavaScript",
+        "option_d": "Only Python",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork provide API access?",
+        "option_a": "No API",
+        "option_b": "Yes, comprehensive API",
+        "option_c": "Only REST API",
+        "option_d": "Only WebSocket",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is Stork's approach to scalability?",
+        "option_a": "Not scalable",
+        "option_b": "Highly scalable architecture",
+        "option_c": "Limited scalability",
+        "option_d": "Scales only vertically",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork handle exotic assets?",
+        "option_a": "No, mainstream only",
+        "option_b": "Yes, supports exotic assets",
+        "option_c": "Only crypto",
+        "option_d": "Only traditional assets",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is the governance model of Stork?",
+        "option_a": "Centralized governance",
+        "option_b": "Community governance",
+        "option_c": "No governance",
+        "option_d": "Hybrid governance",
+        "correct_answer": "d",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Does Stork support real-time streaming?",
+        "option_a": "No streaming",
+        "option_b": "Yes, real-time data streaming",
+        "option_c": "Only batch updates",
+        "option_d": "Only on-demand",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is Stork's data freshness?",
+        "option_a": "Updated daily",
+        "option_b": "Updated hourly",
+        "option_c": "Near real-time updates",
+        "option_d": "Updated weekly",
+        "correct_answer": "c",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "Can Stork be used for insurance protocols?",
+        "option_a": "No",
+        "option_b": "Yes, suitable for insurance",
+        "option_c": "Only for health insurance",
+        "option_d": "Only for car insurance",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's redundancy strategy?",
+        "option_a": "No redundancy",
+        "option_b": "Single point of failure",
+        "option_c": "Multiple redundant data sources",
+        "option_d": "Manual backup",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support WebSocket connections?",
+        "option_a": "No WebSocket",
+        "option_b": "Yes, WebSocket support",
+        "option_c": "Only HTTP",
+        "option_d": "Only gRPC",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's target market?",
+        "option_a": "Only retail traders",
+        "option_b": "DeFi protocols and institutions",
+        "option_c": "Only institutions",
+        "option_d": "Only individual developers",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "Can Stork handle high volatility periods?",
+        "option_a": "No, breaks during volatility",
+        "option_b": "Yes, designed for high volatility",
+        "option_c": "Only low volatility",
+        "option_d": "Pauses during volatility",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's data aggregation method?",
+        "option_a": "Single source",
+        "option_b": "Random selection",
+        "option_c": "Weighted median from multiple sources",
+        "option_d": "Simple average",
+        "correct_answer": "c",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Does Stork support testnets?",
+        "option_a": "No testnet support",
+        "option_b": "Yes, multiple testnet support",
+        "option_c": "Only mainnet",
+        "option_d": "Only Ethereum testnet",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is Stork's approach to privacy?",
+        "option_a": "No privacy",
+        "option_b": "Full transparency",
+        "option_c": "Privacy-preserving where needed",
+        "option_d": "Complete anonymity",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork be used for automated market makers (AMMs)?",
+        "option_a": "No",
+        "option_b": "Yes, perfect for AMMs",
+        "option_c": "Only for order books",
+        "option_d": "Only for centralized exchanges",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is Stork's disaster recovery plan?",
+        "option_a": "No plan",
+        "option_b": "Manual recovery",
+        "option_c": "Automated failover and redundancy",
+        "option_d": "Community-driven recovery",
+        "correct_answer": "c",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Does Stork support batch queries?",
+        "option_a": "No batch support",
+        "option_b": "Yes, batch query support",
+        "option_c": "Only single queries",
+        "option_d": "Batch queries cost extra",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's competitive advantage?",
+        "option_a": "Higher prices",
+        "option_b": "Low latency and high reliability",
+        "option_c": "Limited features",
+        "option_d": "Centralization",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "Can Stork integrate with Layer 2 solutions?",
+        "option_a": "No L2 support",
+        "option_b": "Yes, full L2 integration",
+        "option_c": "Only Optimism",
+        "option_d": "Only Arbitrum",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's data retention policy?",
+        "option_a": "No retention",
+        "option_b": "24 hours only",
+        "option_c": "Long-term historical data",
+        "option_d": "1 week only",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support custom price pairs?",
+        "option_a": "No custom pairs",
+        "option_b": "Yes, custom pair support",
+        "option_c": "Only major pairs",
+        "option_d": "Only USD pairs",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's monitoring system?",
+        "option_a": "No monitoring",
+        "option_b": "Manual checks",
+        "option_c": "24/7 automated monitoring",
+        "option_d": "Community monitoring",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork be used for yield farming?",
+        "option_a": "No",
+        "option_b": "Yes, supports yield farming protocols",
+        "option_c": "Only for staking",
+        "option_d": "Only for liquidity mining",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is Stork's update mechanism?",
+        "option_a": "Manual updates",
+        "option_b": "Scheduled updates",
+        "option_c": "Event-driven and continuous",
+        "option_d": "Random updates",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support multi-signature verification?",
+        "option_a": "No multi-sig",
+        "option_b": "Yes, multi-sig support",
+        "option_c": "Only single signature",
+        "option_d": "Optional multi-sig",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "What is Stork's approach to data quality?",
+        "option_a": "No quality checks",
+        "option_b": "Basic validation",
+        "option_c": "Rigorous quality assurance and validation",
+        "option_d": "Community validation",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork handle flash loan attacks?",
+        "option_a": "Vulnerable to attacks",
+        "option_b": "Protected with time-weighted averages",
+        "option_c": "No protection",
+        "option_d": "Manual intervention needed",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "What is Stork's documentation quality?",
+        "option_a": "No documentation",
+        "option_b": "Basic docs",
+        "option_c": "Comprehensive documentation",
+        "option_d": "Community-written only",
+        "correct_answer": "c",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "Does Stork support GraphQL?",
+        "option_a": "No GraphQL",
+        "option_b": "Yes, GraphQL support",
+        "option_c": "Only REST",
+        "option_d": "Only SOAP",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to backwards compatibility?",
+        "option_a": "No backwards compatibility",
+        "option_b": "Breaking changes often",
+        "option_c": "Maintains backwards compatibility",
+        "option_d": "Version-specific only",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork be used for options trading?",
+        "option_a": "No",
+        "option_b": "Yes, supports options protocols",
+        "option_c": "Only for spot",
+        "option_d": "Only for futures",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's rate limiting policy?",
+        "option_a": "No limits",
+        "option_b": "Very restrictive",
+        "option_c": "Reasonable limits based on tier",
+        "option_d": "Unlimited for all",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support perpetual contracts?",
+        "option_a": "No support",
+        "option_b": "Yes, ideal for perpetuals",
+        "option_c": "Only spot markets",
+        "option_d": "Only futures",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to gas optimization?",
+        "option_a": "No optimization",
+        "option_b": "High gas costs",
+        "option_c": "Gas-optimized contracts",
+        "option_d": "Not applicable",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork provide forex data?",
+        "option_a": "No forex",
+        "option_b": "Yes, forex pairs supported",
+        "option_c": "Only crypto",
+        "option_d": "Only major currencies",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is Stork's validator network?",
+        "option_a": "No validators",
+        "option_b": "Single validator",
+        "option_c": "Distributed validator network",
+        "option_d": "Centralized validation",
+        "correct_answer": "c",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Does Stork support commodities pricing?",
+        "option_a": "No commodities",
+        "option_b": "Yes, commodities supported",
+        "option_c": "Only gold",
+        "option_d": "Only oil",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is Stork's slashing mechanism?",
+        "option_a": "No slashing",
+        "option_b": "Automatic slashing for bad data",
+        "option_c": "Manual slashing",
+        "option_d": "Community voting for slashing",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Can Stork be used for synthetic assets?",
+        "option_a": "No",
+        "option_b": "Yes, perfect for synthetics",
+        "option_c": "Only for real assets",
+        "option_d": "Limited support",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to censorship resistance?",
+        "option_a": "Not censorship resistant",
+        "option_b": "Partially resistant",
+        "option_c": "Fully censorship resistant",
+        "option_d": "No consideration",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support index prices?",
+        "option_a": "No indexes",
+        "option_b": "Yes, index price support",
+        "option_c": "Only individual assets",
+        "option_d": "Only crypto indexes",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to MEV protection?",
+        "option_a": "No MEV protection",
+        "option_b": "Basic protection",
+        "option_c": "Advanced MEV mitigation",
+        "option_d": "Not applicable",
+        "correct_answer": "c",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Can Stork handle circuit breakers?",
+        "option_a": "No circuit breakers",
+        "option_b": "Yes, built-in circuit breakers",
+        "option_c": "Manual intervention only",
+        "option_d": "Not needed",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "What is Stork's approach to data sovereignty?",
+        "option_a": "Centralized data",
+        "option_b": "Distributed data ownership",
+        "option_c": "No consideration",
+        "option_d": "Government controlled",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support volatility indexes?",
+        "option_a": "No volatility data",
+        "option_b": "Yes, volatility indexes",
+        "option_c": "Only price data",
+        "option_d": "Coming soon",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to oracle extractable value (OEV)?",
+        "option_a": "Ignores OEV",
+        "option_b": "Captures and redistributes OEV",
+        "option_c": "No OEV consideration",
+        "option_d": "Centralized OEV capture",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Can Stork be used for collateralized debt positions?",
+        "option_a": "No",
+        "option_b": "Yes, ideal for CDPs",
+        "option_c": "Only for lending",
+        "option_d": "Only for borrowing",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to data finality?",
+        "option_a": "No finality guarantees",
+        "option_b": "Probabilistic finality",
+        "option_c": "Cryptographic finality",
+        "option_d": "Manual confirmation",
+        "correct_answer": "c",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Does Stork support time-series data?",
+        "option_a": "No time-series",
+        "option_b": "Yes, full time-series support",
+        "option_c": "Only snapshots",
+        "option_d": "Limited history",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to network partitions?",
+        "option_a": "Fails during partitions",
+        "option_b": "Resilient to partitions",
+        "option_c": "No consideration",
+        "option_d": "Manual recovery",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Can Stork provide liquidity depth data?",
+        "option_a": "No liquidity data",
+        "option_b": "Yes, liquidity metrics",
+        "option_c": "Only price",
+        "option_d": "Only volume",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to data compression?",
+        "option_a": "No compression",
+        "option_b": "Basic compression",
+        "option_c": "Advanced compression algorithms",
+        "option_d": "Not needed",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support cross-margining?",
+        "option_a": "No cross-margin support",
+        "option_b": "Yes, supports cross-margin protocols",
+        "option_c": "Only isolated margin",
+        "option_d": "Not applicable",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "What is Stork's approach to timestamp accuracy?",
+        "option_a": "No timestamps",
+        "option_b": "Approximate timestamps",
+        "option_c": "High-precision timestamps",
+        "option_d": "Manual timestamps",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork handle market microstructure data?",
+        "option_a": "No microstructure data",
+        "option_b": "Yes, detailed market data",
+        "option_c": "Only basic prices",
+        "option_d": "Only for specific markets",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "What is Stork's approach to Byzantine fault tolerance?",
+        "option_a": "Not Byzantine fault tolerant",
+        "option_b": "Partially tolerant",
+        "option_c": "Fully Byzantine fault tolerant",
+        "option_d": "No consideration",
+        "correct_answer": "c",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Does Stork support order book data?",
+        "option_a": "No order book",
+        "option_b": "Yes, order book snapshots",
+        "option_c": "Only aggregated prices",
+        "option_d": "Only for DEXes",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to data normalization?",
+        "option_a": "No normalization",
+        "option_b": "Basic normalization",
+        "option_c": "Advanced normalization across sources",
+        "option_d": "Manual normalization",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork be used for risk management systems?",
+        "option_a": "No",
+        "option_b": "Yes, ideal for risk management",
+        "option_c": "Only for trading",
+        "option_d": "Limited use",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    },
+    {
+        "question_text": "What is Stork's approach to data provenance?",
+        "option_a": "No provenance tracking",
+        "option_b": "Basic tracking",
+        "option_c": "Full cryptographic provenance",
+        "option_d": "Manual tracking",
+        "correct_answer": "c",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "Does Stork support funding rate data?",
+        "option_a": "No funding rates",
+        "option_b": "Yes, funding rate feeds",
+        "option_c": "Only for specific exchanges",
+        "option_d": "Coming soon",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What makes Stork suitable for institutional use?",
+        "option_a": "Low reliability",
+        "option_b": "Enterprise-grade infrastructure and SLAs",
+        "option_c": "Only for retail",
+        "option_d": "No institutional features",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Can Stork provide settlement prices?",
+        "option_a": "No settlement prices",
+        "option_b": "Yes, settlement price feeds",
+        "option_c": "Only spot prices",
+        "option_d": "Only for futures",
+        "correct_answer": "b",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "What is Stork's approach to data integrity?",
+        "option_a": "No integrity checks",
+        "option_b": "Basic validation",
+        "option_c": "Cryptographic integrity guarantees",
+        "option_d": "Manual verification",
+        "correct_answer": "c",
+        "difficulty": "medium"
+    },
+    {
+        "question_text": "Does Stork support implied volatility data?",
+        "option_a": "No IV data",
+        "option_b": "Yes, implied volatility feeds",
+        "option_c": "Only historical volatility",
+        "option_d": "Coming soon",
+        "correct_answer": "b",
+        "difficulty": "hard"
+    },
+    {
+        "question_text": "What is Stork's vision for the future?",
+        "option_a": "Stay small",
+        "option_b": "Become the standard for DeFi price feeds",
+        "option_c": "Only serve specific chains",
+        "option_d": "Centralize operations",
+        "correct_answer": "b",
+        "difficulty": "easy"
+    }
+]

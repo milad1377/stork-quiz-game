@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="tab.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stork Oracle Quiz Challenge</title>
+    <meta name="description" content="Test your knowledge about Stork Oracle">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Snowfall Canvas -->
+    <canvas id="snowfall-canvas"></canvas>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Discord Input Screen -->
+        <div id="discord-input-screen" class="screen">
+            <div class="screen-content">
+                <div class="logo">
+                    <h1>Stork Oracle Quiz</h1>
+                    <p class="tagline">Test Your Knowledge, Compete with Friends</p>
+                </div>
+
+                <form id="discord-form" class="input-form">
+                    <div class="form-group">
+                        <label for="discord-input">Enter Your Discord Username</label>
+                        <input type="text" id="discord-input" placeholder="Username" required autocomplete="off">
+                        <p class="input-hint">This will be your display name in the game</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        Continue
+                        <span class="btn-arrow">→</span>
+                    </button>
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+                    <button type="button" id="discord-oauth-btn" class="btn btn-discord btn-large">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z" />
+                        </svg>
+                        Login with Discord
+                    </button>
+
+                    <button type="button" id="discord-back-btn" class="btn btn-outline">
+                        ← Back
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Menu Screen -->
+        <div id="menu-screen" class="screen active">
+            <div class="screen-content">
+                <div class="logo-small">
+                    <h2>Stork Oracle Quiz</h2>
+                </div>
+
+                <div class="menu-options">
+                    <button id="single-player-btn" class="menu-btn">
+                        <div class="menu-btn-icon">🎯</div>
+                        <div class="menu-btn-content">
+                            <h3>Single Player</h3>
+                            <p>Play solo and test your knowledge</p>
+                        </div>
+                    </button>
+
+                    <button id="create-room-btn" class="menu-btn">
+                        <div class="menu-btn-icon">🎮</div>
+                        <div class="menu-btn-content">
+                            <h3>Multiplayer</h3>
+                            <p>Create a room and invite friends</p>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Christmas Scene -->
+                <div class="christmas-scene">
+                    <!-- Left Gopher (Peace Sign) -->
+                    <img src="gopher_left.png" alt="Happy Gopher" class="gopher-left">
+
+                    <div class="christmas-tree-container">
+                        <div class="tree-star">⭐</div>
+                        <div class="tree-layer top">
+                            <div class="tree-light red" style="left: -10px; top: 15px;"></div>
+                            <div class="tree-light yellow" style="right: -10px; top: 15px;"></div>
+                            <div class="tree-light blue" style="left: 0px; top: 18px;"></div>
+                        </div>
+                        <div class="tree-layer middle">
+                            <div class="tree-light blue" style="left: -18px; top: 20px;"></div>
+                            <div class="tree-light green" style="right: -18px; top: 20px;"></div>
+                            <div class="tree-light red" style="left: -5px; top: 25px;"></div>
+                            <div class="tree-light yellow" style="right: -5px; top: 25px;"></div>
+                            <div class="tree-light green" style="left: 5px; top: 28px;"></div>
+                        </div>
+                        <div class="tree-layer bottom">
+                            <div class="tree-light yellow" style="left: -25px; top: 25px;"></div>
+                            <div class="tree-light blue" style="right: -25px; top: 25px;"></div>
+                            <div class="tree-light green" style="left: -15px; top: 30px;"></div>
+                            <div class="tree-light red" style="right: -15px; top: 30px;"></div>
+                            <div class="tree-light blue" style="left: 0px; top: 33px;"></div>
+                            <div class="tree-light yellow" style="left: -8px; top: 36px;"></div>
+                            <div class="tree-light green" style="right: -8px; top: 36px;"></div>
+                        </div>
+                        <div class="tree-trunk"></div>
+                    </div>
+
+                    <!-- Right Gopher (Cozy with Coffee) -->
+                    <img src="gopher_right.png" alt="Cozy Gopher" class="gopher-right">
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Room Settings Screen -->
+        <div id="create-room-settings-screen" class="screen">
+            <div class="screen-content">
+                <div class="lobby-header">
+                    <h2>Room Settings</h2>
+                    <p>Customize your game</p>
+                </div>
+
+                <div class="settings-container">
+                    <!-- Difficulty Selection -->
+                    <div class="setting-group">
+                        <label>Difficulty</label>
+                        <div class="difficulty-options">
+                            <button class="difficulty-btn selected" data-value="mixed">
+                                🎲 Mixed
+                            </button>
+                            <button class="difficulty-btn" data-value="easy">
+                                🟢 Easy
+                            </button>
+                            <button class="difficulty-btn" data-value="medium">
+                                🟡 Medium
+                            </button>
+                            <button class="difficulty-btn" data-value="hard">
+                                🔴 Hard
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question Mode Selection -->
+                    <div class="setting-group">
+                        <label>Question Set</label>
+                        <div class="difficulty-options">
+                            <button class="mode-btn selected" data-value="same">
+                                ⚖️ Same for All
+                            </button>
+                            <button class="mode-btn" data-value="different">
+                                🎲 Different (Random)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Score Limit Selection -->
+                    <div class="setting-group">
+                        <label>Match End When First Player Reach This Point</label>
+                        <div class="score-input-group">
+                            <input type="number" id="score-limit-input" placeholder="50" min="50" step="50" value="50">
+                            <span class="input-suffix">points</span>
+                        </div>
+                        <p class="score-description">
+                            Min ( 50 ) First to reach target wins! <br>
+                            (Correct Answer = 10pts + Speed Bonus)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="back-to-menu-btn" class="btn btn-secondary">← Back</button>
+                    <button id="confirm-create-room-btn" class="btn btn-primary">Create Room →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Player Settings Screen -->
+        <div id="single-player-settings-screen" class="screen">
+            <div class="screen-content">
+                <div class="lobby-header">
+                    <h2>Single Player Setup</h2>
+                    <p>Customize your practice session</p>
+                </div>
+
+                <div class="settings-container">
+                    <div class="setting-group">
+                        <label>Difficulty</label>
+                        <div class="difficulty-options">
+                            <button class="sp-difficulty-btn" data-value="mixed">🎲 Mixed</button>
+                            <button class="sp-difficulty-btn" data-value="easy">🟢 Easy</button>
+                            <button class="sp-difficulty-btn" data-value="medium">🟡 Medium</button>
+                            <button class="sp-difficulty-btn" data-value="hard">🔴 Hard</button>
+                        </div>
+                    </div>
+
+                    <div class="setting-group">
+                        <label>Number of Questions</label>
+                        <div class="score-input-group">
+                            <input type="number" id="sp-questions-input" value="10" min="5" max="50" step="5">
+                            <span class="input-suffix">questions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="sp-back-btn" class="btn btn-secondary">← Back</button>
+                    <button id="sp-start-btn" class="btn btn-primary">Start Game →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lobby Screen -->
+        <div id="lobby-screen" class="screen">
+            <div class="screen-content">
+                <div class="lobby-header">
+                    <h2>Game Lobby</h2>
+                    <p>Waiting for players to join...</p>
+                </div>
+
+                <div class="lobby-link-container">
+                    <p class="link-label">Share this link to invite players:</p>
+                    <div class="link-box">
+                        <input type="text" id="shareable-link" readonly>
+                        <button id="copy-link-btn" class="btn-icon">📋</button>
+                    </div>
+                </div>
+
+                <div class="players-container">
+                    <h3>Players (<span id="player-count">0</span>)</h3>
+                    <div id="players-list" class="players-list">
+                        <!-- Players will be added here dynamically -->
+                    </div>
+                </div>
+
+                <div class="lobby-actions">
+                    <button id="lobby-back-btn" class="btn btn-outline">← Back to Menu</button>
+                    <button id="start-game-btn" class="btn btn-primary btn-large">Start Game</button>
+                    <p id="waiting-msg" class="waiting-message hidden">Waiting for host to start...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div id="question-screen" class="screen">
+            <div class="screen-content">
+                <div class="question-header">
+                    <div class="question-progress">
+                        <span id="question-number">Question 1/20</span>
+                        <div class="progress-bar-container">
+                            <div id="progress-bar" class="progress-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Live Header Info (Alternative to Question Progress) -->
+                    <div id="live-header-info" class="live-header-info hidden">
+                        <div class="target-score-display">
+                            🎯 Target : <span id="target-score-val">50</span>
+                        </div>
+                        <div id="live-leaderboard" class="live-leaderboard-mini">
+                            <!-- Top player injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timer-container">
+                    <div id="timer-display" class="timer-text">15.0s</div>
+                    <div class="timer-bar-bg">
+                        <div id="timer-bar" class="timer-bar"></div>
+                    </div>
+                </div>
+
+                <!-- Player Score Display (for multiplayer) -->
+                <div id="player-score-display" class="player-score-display" style="display: none;">
+                    Your Score: <span id="player-score-value">0</span>
+                </div>
+
+                <div class="question-card">
+                    <h2 id="question-text">Loading question...</h2>
+                </div>
+
+                <div id="options-container" class="options-grid">
+                    <!-- Options will be injected here -->
+                </div>
+
+                <div id="answer-result" class="answer-result" style="display: none;">
+                    <!-- Result feedback -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="screen-content">
+                <div class="results-header">
+                    <h2>Game Over!</h2>
+                    <p>Here are the final standings</p>
+                </div>
+
+                <div id="leaderboard" class="leaderboard">
+                    <!-- Leaderboard items injected here -->
+                </div>
+
+                <button id="play-again-btn" class="btn btn-primary btn-large">Play Again</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="sounds.js"></script>
+    <script src="utils.js"></script>
+    <script src="database.js"></script>
+    <script src="auth.js"></script>
+    <script src="ui.js"></script>
+    <script src="game.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('code')) {
+            (async () => {
+                ui.showLoading(true);
+
+                let roomCode = urlParams.get('room');
+
+                if (!roomCode) {
+                    roomCode = localStorage.getItem('oauth_pending_room');
+                    localStorage.removeItem('oauth_pending_room');
+                }
+
+                const pendingAction = localStorage.getItem('pendingAction');
+
+                const user = await discordAuth.handleCallback();
+                ui.showLoading(false);
+
+                if (user) {
+                    if (roomCode) {
+                        localStorage.removeItem('pendingAction');
+                        window.history.replaceState({}, document.title, `?room=${roomCode}`);
+                        if (await game.setPlayer(user.discord_id, true)) {
+                            await game.joinRoomByCode(roomCode);
+                        } else {
+                            ui.showScreen('discord-input');
+                        }
+                    } else if (pendingAction === 'create-room') {
+                        localStorage.removeItem('pendingAction');
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                        if (await game.setPlayer(user.discord_id, true)) {
+                            ui.showCreateRoomSettings();
+                        } else {
+                            ui.showScreen('discord-input');
+                        }
+                    } else {
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                        if (await game.setPlayer(user.discord_id, true)) {
+                            // Show menu
+                            ui.showScreen('menu');
+                        } else {
+                            ui.showScreen('discord-input');
+                        }
+                    }
+                } else {
+                    ui.showScreen('discord-input');
+                }
+            })();
+        }
+
+        document.getElementById('discord-oauth-btn').addEventListener('click', function () {
+            // Check if we are trying to join a room (from URL or SessionStorage)
+            const urlParams = new URLSearchParams(window.location.search);
+            const roomFromUrl = urlParams.get('room');
+            const pendingRoom = sessionStorage.getItem('pendingRoomCode');
+
+            const roomToSave = roomFromUrl || pendingRoom;
+
+            if (roomToSave) {
+                localStorage.setItem('oauth_pending_room', roomToSave);
+            }
+
+            discordAuth.login();
+        });
+
+        document.getElementById('discord-back-btn').addEventListener('click', function () {
+            ui.showScreen('menu');
+        });
+
+        document.getElementById('lobby-back-btn').addEventListener('click', async function () {
+            if (confirm('Are you sure you want to leave the lobby?')) {
+                await game.leaveRoom();
+            }
+        });
+    </script>
+
+    <script>
+        (function () {
+            const canvas = document.getElementById('snowfall-canvas');
+            const ctx = canvas.getContext('2d');
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            class Snowflake {
+                constructor() {
+                    this.reset();
+                }
+
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = -10;
+                    this.radius = Math.random() * 5 + 2;
+                    this.speed = Math.random() * 1 + 0.5;
+                    this.wind = Math.random() * 0.5 - 0.25;
+                    this.opacity = Math.random() * 0.6 + 0.4;
+                }
+
+                update() {
+                    this.y += this.speed;
+                    this.x += this.wind;
+
+                    // Reset if snowflake goes off screen
+                    if (this.y > canvas.height) {
+                        this.reset();
+                    }
+
+                    if (this.x > canvas.width) {
+                        this.x = 0;
+                    } else if (this.x < 0) {
+                        this.x = canvas.width;
+                    }
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                    ctx.fill();
+                }
+            }
+
+            const snowflakes = [];
+            const snowflakeCount = 300;
+
+            for (let i = 0; i < snowflakeCount; i++) {
+                snowflakes.push(new Snowflake());
+                snowflakes[i].y = Math.random() * canvas.height;
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                snowflakes.forEach(snowflake => {
+                    snowflake.update();
+                    snowflake.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        })();
+    </script>
+
+</body>
+
+</html>
